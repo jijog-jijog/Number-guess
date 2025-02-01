@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Guess!! the number</p>
+    <input  type="text" id="input">
+    <button id="Check" onclick="Check()">Check</button>
+    <br>
+    <h4 id="result">You zre right/wrong</h4>
+    <h4 id="score">Your score is:10</h4>
+   
+    <script>
+        var box=document.getElementById("input")
+        var analyse=document.getElementById("Check")
+        var answer=document.getElementById("result")
+        
+        var mark=document.getElementById("score")
+        var a=Math.floor(Math.random()*10)+1
+        var totalscore=10
+        
+        function Check()
+        {
+            
+            if(a == Number(box.value))
+            {   
+                console.log("Right")          
+                answer.textContent="The answer is right"
+            }
+            else{
+                totalscore=totalscore-1               
+                console.log("Wrong")
+                answer.textContent="The answer is wrong"
+                mark.textContent="Your score is "+totalscore
+                
+
+            }
+        
+        }
+    </script>
+</body>
+</html>
