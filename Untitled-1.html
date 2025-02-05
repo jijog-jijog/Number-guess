@@ -1,0 +1,22 @@
+<h4 id="score">Your score is:</h4>
+<input id="text" type="number">
+<button id="Check" onclick="Check()">Check</button>
+<p id="result"></p>
+
+<script>
+    var text = document.getElementById("text");
+    var button = document.getElementById("Check");
+    var result = document.getElementById("result");
+    var score = document.getElementById("score");
+    var a = Math.floor(Math.random() * 10) + 1;
+
+    function Check() {
+        if (a == text.value) {
+            console.log("Right");
+            result.textContent = "The answer is right";
+        } else {
+            console.log("Wrong");
+            result.textContent = "The answer is wrong";
+        }
+    }
+</script>
